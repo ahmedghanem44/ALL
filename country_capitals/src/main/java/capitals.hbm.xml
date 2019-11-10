@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ 
+<class name="com.nemo.capitals.CountryCapitalBean" table="capitals" >
+
+<id name="empId" column="id">
+<generator class="increment"></generator>
+<!--   <generator class="sequence">
+<param name="sequence">ora_seq</param>
+</generator> -->
+</id>
+
+<property name="country" column="country"></property>
+<property name="capital" column="capital"></property>
+
+</class>
+
+<!-- <list name="coffee" cascade="all">
+<key column = "coffeeType_id"></key>
+<index column = "coffee_index"></index>
+<one-to-many class="com.beans.Coffee"/>
+</list>
+</class> -->
+
+<!-- <class name="com.beans.Coffee" table="coffee">
+<id name ="cId" column = "coffee_id">
+<generator class="increment"></generator>
+</id>
+<property name="cName" column="coffee_name"></property>
+</class> -->
+
+</hibernate-mapping> 

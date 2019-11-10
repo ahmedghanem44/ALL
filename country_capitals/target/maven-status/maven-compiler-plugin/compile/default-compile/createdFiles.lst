@@ -1,0 +1,4 @@
+com\nemo\capitals\CapitalsController.class
+com\nemo\capitals\CapitalDao.class
+com\nemo\capitals\CapitalDaoImp.class
+com\nemo\capitals\CountryCapitalBean.class

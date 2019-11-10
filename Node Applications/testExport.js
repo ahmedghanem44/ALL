@@ -1,0 +1,2 @@
+
+exports.dateAndTime = new Date();

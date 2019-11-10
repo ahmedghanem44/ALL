@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    
+    
+    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName">
+    <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <property name="url">
+    <value>jdbc:mysql://localhost:3306/countries_capitals</value>
+    </property>
+    <property name="username">
+    <value>root</value>
+    </property>
+    <property name="password">
+    <value>pass</value>
+    </property> 
+    </bean>
+    
+    <bean id="mySessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+    <property name="dataSource" ref="ds"></property>
+    <property name="mappingResources">
+    <list>
+    <value>capitals.hbm.xml</value>
+    </list>
+    </property>
+    <property name="hibernateProperties">
+    <props>
+    <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+    <prop key="show_sql">true</prop>
+     <prop key="hibernate.hbm2ddl.auto">update</prop>
+
+ </props>
+    
+    </property>
+    </bean>
+    
+    
+    
+    <bean name="emp" class="com.nemo.capitals.CountryCapitalBean" scope="prototype">
+<!--     	<property name="empId" value="1"></property>
+    	<property name="fname" value="Ahmed"></property>
+    	<property name="lname" value="Ghanem"></property>
+    	<property name="email" value="ahmed@email.com"></property> -->
+    </bean>
+ 
+    
+    <bean id="sf" class="com.nemo.capitals.CapitalDaoImp">
+    
+    <property name="factory" ref="mySessionFactory"></property>
+    <!-- <property name="empAll" ref="emps"></property> -->
+    </bean> 
+    
+    </beans>
