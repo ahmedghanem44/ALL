@@ -1,2 +1,0 @@
-
-exports.dateAndTime = new Date();

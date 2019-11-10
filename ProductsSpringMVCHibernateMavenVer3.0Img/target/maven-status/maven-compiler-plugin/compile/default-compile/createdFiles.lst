@@ -1,8 +1,0 @@
-com\nemo\dao\ProductDao.class
-com\nemo\dao\ProductDaoInterface.class
-com\nemo\model\Product.class
-com\nemo\service\ProductServiceInterface.class
-com\nemo\controller\ProductController.class
-com\nemo\beans\ProductBean.class
-com\nemo\operation\BeanModelConverstion.class
-com\nemo\service\ProductService.class

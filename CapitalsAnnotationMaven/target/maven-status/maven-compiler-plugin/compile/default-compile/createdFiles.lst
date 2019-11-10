@@ -1,5 +1,0 @@
-com\nemo\configuration\CapitalConfiguration.class
-com\nemo\service\CapitalsService.class
-com\nemo\controller\CapitalsController.class
-com\nemo\configuration\CapitalsDispatcher.class
-com\nemo\components\CapitalsBean.class
